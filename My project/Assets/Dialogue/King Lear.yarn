@@ -1,0 +1,212 @@
+title: Start
+tags: 
+colorID: 0
+position: 0,0
+---
+
+// sets background image to sprite called "bg_castle"
+<<Scene bg_castle>>
+// start playing audioclip "ambient_birds" at 50% volume, loop forever
+<<PlayAudio ambient_birds 0.5 loop>>
+
+Today Lear will accomplish a great thing to distribute his land to his daughters and sons-in-law, no longer be involved in political power, and have peace of mind in retirement.
+
+// adds actor named "Lear" using sprite "5", placed in left-half + center of screen, with yellow text label
+<<Act Lear 5 left center Yellow>>
+
+Lear: Today, I will tell you something on my mind. I've divided the map into three because I'm getting older and want to get away from it all and give the power to the younger people. 
+
+Lear: Mr. Cornwall and Mr. Obenny, I will divide up my daughters' assets in case there's any future strife.
+
+Lear: And the monarchs of France and Burgundy are courting my little daughter.
+
+Lear: There are also the monarchs of France and Burgundy who are courting my youngest daughter, and before I make up my mind, please tell me which of your daughters loves me the most.
+
+Lear: Gorina, my eldest daughter, you go first.
+// adds actor "Adam" with sprite "biz-guy" off-screen right, with blue-ish text label
+<<Act Gorina 1 1.25 center Green>>
+
+// animate Adam into new position in right-half + center, within 0.5 seconds
+<<Move Gorina right center 0.5>>
+
+Gorina: Father, I love you more than words can express. 
+
+Gorina: I love you more than my eyes, my freedom, my everything.
+
+Lear: My dear second daughter Reagan, what do you think?
+
+<<Move Gorina 1.25 center 0.5>>
+
+<<Act Reagan 2 1.25 center #ccff5e>>
+<<Move Reagan right center 0.5>>
+
+Reagan: I love you as much as my sister. But I'm not too fond of all pleasure obtained through the senses. 
+
+Reagan: Only loving you can make me extremely happy and happy.
+
+Lear: My little Cordelia, tell me about your love for me.
+
+<<Move Reagan 1.25 center 0.5>>
+
+<<Act Cordelia 3 1.25 center #ff7dd9>>
+<<Move Cordelia right center 0.5>>
+
+Cordelia: Nothing, my Father.
+
+<<Shake Lear>>
+
+Lear: Nothing only can get Nothing.
+Lear: I'll give you a chance to answer me again.
+
+-> Cordelia didn't revise the answer
+	
+	Cordelia: I'm a clumsy person, can't let my heart out. 
+	Cordelia: I love you according to my birthright, no more, no less.
+	<<Shake Lear>>
+	Lear: You lost your good heart at such a young age!
+	Cordelia: Young as I am, I am very loyal to you.
+	Lear: Shut up!
+	Lear: Then let your loyalty be your property!
+	<<Move Cordelia 1.25 center 0.5>>
+	Lear: I decide to divide England equally between my eldest daughter Gorina and my second daughter Reagan. 
+	Lear: I will give them all the treasures of gold and silver and troops in the Treasury. 
+	Lear: The youngest daughter, Cordelia, will be married away to France and will become the wife of the king of France. 
+	Lear: Cordelia can not get any property or land.
+	<<Fade black 0.0 1.0 2.0>>
+	<<jump Frence>>
+
+-> Cordelia changed to a fancy word to deceive Lear
+
+	Cordelia: I can't change my love for you. 
+	Cordelia: I love you with all my heart now, and I won't change my love for you when I get married and have a husband and children.
+	<<Shake Lear>>
+	Lear: I'm disappointed in you!
+	<<Move Cordelia 1.25 center 0.5>>
+	Lear: I decide to divide the rich land equally between my eldest daughter, Gorina, and my second daughter, Reagan. 
+	Lear: Cordelia can only get some barren and remote land. A great deal of gold and silver went to Gorina and Reagan.
+	<<Flip Lear>>
+	<<Move Lear -0.25 center 1.0>>
+	<<Act Lothaire 4 right center #b0a0ff>>
+	<<wait 1.0>>
+	Lothaire: Cordelia is so honest and kind. 
+	Lothaire: She has wholly attracted me. 
+	Lothaire: I must marry her, make her the queen of France.
+	<<Move Lothaire 1.25 center 0.5>>
+	<<Fade black 0.0 1.0 2.0>>
+	<<StopAudio ambient_birds>>
+	<<wait 2.0>>
+	
+	<<jump BerrenLand>>
+
+
+===
+title: BerrenLand
+tags:
+colorID: 0
+position: 0,0
+---
+<<Scene bg_barrenLand>>
+<<Fade black 1.0 0.0 2.0>>
+<<PlayAudio awaken-136824 0.4 loop>>
+<<wait 2.0>>
+
+Cordelia traveled to remote barren land, where the people she saw were impoverished, with thin faces, ragged clothes, and crumbling houses.
+People in the barren land are poor because of bad weather, natural disasters, and the failure of crops to grow properly. 
+Hunger ruled the land for a long time. 
+Cordelia can't watch her people starve.
+
+<<Move Cordelia right center 0.5>>
+Cordelia: I need to change things here so the people would become rich and not starve!
+
+-> Consult a magician
+	<<jump Magic>>
+-> Study mechanics and alchemy
+	<<jump Tech>>
+-> To the King of France for help
+	<<jump Help>>
+===
+
+title: Magic
+tags:
+colorID: 0
+position: 0,0
+---
+
+Cordelia visits a local warlock. Learn that magic is a mysterious and powerful force that can control the weather, protect crops from extreme weather, and get enough water to keep food thriving. 
+Cordelia developed a strong interest in magic and decided to learn the power so that her people would not starve.
+
+<<Act Witch 6 left center Red>>
+Witch: I can teach you powerful magic.
+Witch: But learning spells is brutal and involves complex trials and sacrifices of a sense.
+->Sacrificial hearing
+	Cordelia: I sacrifice my hearing.
+->Sacrificial vision
+	Cordelia: I sacrifice my vision.
+->Sacrificial taste
+	Cordelia: I sacrifice my taste.
+
+
+<<Move Witch -0.25 center 0.5>>
+<<Move Cordelia 1.25 center 0.5>>
+Cordelia eventually learned powerful magic and became a warlock. 
+Under Cordelia's protection, crops thrive, and people live happy life.
+<<Fade black 0.0 1.0 2.0>>
+<<wait 2.0>>
+<<Scene 8>>
+<<Fade black 1.0 0.0 2.0>>
+To be continued
+===
+title: Tech
+tags:
+colorID: 0
+position: 0,0
+---
+Cordelia began to study alchemy from books, learning the recipes for various potions, from ones that could boost the growth of crops to powerful gunpowder. 
+Cordelia wanted more than merely learning alchemy. She also began to learn about mechanics, building water conservancies for her people, and designing farm tools.
+<<Fade black 0.0 1.0 2.0>>
+<<wait 2.0>>
+<<Scene 8>>
+<<Fade black 1.0 0.0 2.0>>
+<<wait 2.0>>
+
+<<Act Counsellor 4 left center Red>>
+Counsellor:I suggest that this powder be used in the army.
+-> The use of gunpowder in the army
+	Cordelia: I agreed to use gunpowder to strengthen my troops.
+-> No use of gunpowder in the army
+	Cordelia: I disapprove of the use of gunpowder to strengthen my troops.
+
+
+<<Move Counsellor -0.25 center 0.5>>
+<<Move Cordelia 1.25 center 0.5>>
+To be continued
+===
+title: Help
+tags:
+colorID: 0
+position: 0,0
+---
+<<Move Lothaire left center 0.5>>
+Lothaire: I can generously provide you with food, labor, and soldiers. 
+Lothaire: But only if you marry me.
+-> Accept the aid of the King of France and married him.
+	Cordelia: I will marry you, and I ask you to help save my people.
+	<<jump Save>>
+-> Didn't marry him.
+	Cordelia: I won't marry you. I can save my people myself
+
+To be continued
+===
+title: Save
+tags:
+colorID: 0
+position: 0,0
+---
+<<Fade black 0.0 1.0 2.0>>
+<<wait 2.0>>
+<<Scene 8>>
+<<Fade black 1.0 0.0 2.0>>
+<<Move Lothaire -0.25 center 0.5>>
+<<Move Cordelia 1.25 center 0.5>>
+To be continued
+===
